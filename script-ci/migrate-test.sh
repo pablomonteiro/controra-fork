@@ -34,6 +34,13 @@ docker run --net=host --rm -v $PWD/sql:/flyway/sql flyway/flyway migrate -url="j
 echo "Successfully migrated empty database"
 echo
 
+echo "Executando build do projeto"
+
+./gradlew build
+
+echo "Build finalizado"
+echo
+
 spawnctl delete data-container $emptyContainerName --accessToken $SPAWNCTL_ACCESS_TOKEN -q
 
 echo "Successfully cleaned up the Spawn data container '$emptyContainerName'"
