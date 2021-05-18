@@ -29,7 +29,7 @@ dependencies {
 	implementation 'org.projectlombok:lombok:1.18.16'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.5.5'
 	compileOnly 'org.projectlombok:lombok'
-	compile 'org.postgresql:postgresql:42.1.4'
+	compile 'org.postgresql:postgresql:42.2.11'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation "io.rest-assured:rest-assured:4.1.1"
