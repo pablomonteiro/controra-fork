@@ -36,7 +36,7 @@ echo
 
 echo "Executando build do projeto"
 
-./gradlew build
+gradle build
 
 echo "Build finalizado"
 echo
