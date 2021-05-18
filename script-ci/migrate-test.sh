@@ -28,8 +28,8 @@ docker pull flyway/flyway > /dev/null 2>&1
 echo
 echo "Starting migration of database with flyway"
 
-docker run --net=host --rm -e PGPASSWORD=$password postgres:12-alpine psql -h $host -p $port -U $user -c "create database controra-test"
-docker run --net=host --rm -v $PWD/sql:/flyway/sql flyway/flyway migrate -url="jdbc:postgresql://$host:$port/controra-test" -user=$user -password=$password
+docker run --net=host --rm -e PGPASSWORD=$password postgres:12-alpine psql -h $host -p $port -U $user -c "create database controra_test"
+docker run --net=host --rm -v $PWD/sql:/flyway/sql flyway/flyway migrate -url="jdbc:postgresql://$host:$port/controra_test" -user=$user -password=$password
 
 echo "Successfully migrated empty database"
 echo
