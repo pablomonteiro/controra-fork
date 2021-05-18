@@ -1,0 +1,13 @@
+name: Database migration test
+on: [push]
+jobs:
+  run_migration_test:
+    name: Run Flyway migration tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run database migrations against empty db
+        run: ./script-ci/migrate-test.sh
+        env:
+          SPAWNCTL_ACCESS_TOKEN: ${{ secrets.SPAWNCTL_ACCESS_TOKEN }}
